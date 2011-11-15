@@ -14,9 +14,9 @@ export LD_LIBRARY_PATH=""
 export PYTHON_PATH=""
 export PKG_CONFIG_PATH=""
 
-test -f /etc/profile && source /etc/profile
+test -f "/etc/profile" && source "/etc/profile"
 
-source $IDENTIY_FILE
+source "$IDENTIY_FILE"
 
 if test x"$WORKENV_DIR" = x; then
  echo "WORKENV_DIR variable is missing in the identity file"
