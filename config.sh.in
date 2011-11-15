@@ -1,0 +1,40 @@
+# Named directories.
+p=@PROFILE_DIR@
+pb=$p/build; pi=$p/install; ps=$p/src
+pbs=$p/build/stable; pis=$p/install/stable; pss=$p/src/stable
+pbu=$p/build/unstable; piu=$p/install/unstable; psu=$p/src/unstable
+
+# RobotPkg
+export ROBOTPKG_BASE=$pis
+export PATH="$ROBOTPKG_BASE/bin:$PATH"
+export PATH="$ROBOTPKG_BASE/sbin:$PATH"
+export PKG_CONFIG_PATH="$ROBOTPKG_BASE/lib/pkgconfig:$PKG_CONFIG_PATH"
+export LD_LIBRARY_PATH="$ROBOTPKG_BASE/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$ROBOTPKG_BASE/kineo/lib:$LD_LIBRARY_PATH"
+export PYTHONPATH="$ROBOTPKG_BASE/lib/python2.6/site-packages:$PYTHONPATH"
+export PYTHONPATH="$ROBOTPKG_BASE/lib/python2.6/dist-packages:$PYTHONPATH"
+export MANPATH="$MANPATH:$ROBOTPKG_BASE/share/man"
+
+# Development prefix.
+export PATH="$piu/bin:$PATH"
+export PATH="$piu/sbin:$PATH"
+export PKG_CONFIG_PATH="$piu/lib/pkgconfig:$PKG_CONFIG_PATH"
+export LD_LIBRARY_PATH="$piu/lib:$LD_LIBRARY_PATH"
+export PYTHONPATH="$piu/lib/python2.6/site-packages:$PYTHONPATH"
+export PYTHONPATH="$piu/lib/python2.6/dist-packages:$PYTHONPATH"
+export LTDL_LIBRARY_PATH="$piu/lib/roboptim-core:$LTDL_LIBRARY_PATH"
+export MANPATH="$MANPATH:$piu/share/man"
+
+# For RobOptim...
+export LTDL_LIBRARY_PATH="$ROBOTPKG_BASE/lib/roboptim:$LTDL_LIBRARY_PATH"
+export LTDL_LIBRARY_PATH="$piu/lib/roboptim:$LTDL_LIBRARY_PATH"
+
+# Kineo
+RLM_LICENSE=$(find $HOME/profiles/license -name "RLM_Toulouse-`hostname | sed 's/.laas.fr$//'`-*.lic")
+if test x"$RLM_LICENSE" = x; then
+ echo "Warning: No Kineo license have been found for that machine."
+fi
+export KPP_INSTALL_DIR=$ROBOTPKG_BASE/kineo
+
+# ROS
+test -f "$psu/ros/setup.zsh" && source "$psu/ros/setup.zsh"

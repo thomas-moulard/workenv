@@ -38,3 +38,4 @@ export ROS_EMAILS=thomas.moulard@gmail.com
 
 #PROFILE="icc"
 PROFILE="laas"
+#PROFILE=default-i686-linux-ubuntu-10.04.3
