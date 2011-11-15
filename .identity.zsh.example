@@ -1,0 +1,40 @@
+# -*- shell-script -*-
+
+# CAUTION: this variable is mandatory (you can change it
+# but it must be defined).
+export WORKENV_DIR="$HOME/.workenv"
+
+# Identity
+export NAME='Thomas Moulard'
+export PAGER='less'
+export FULLNAME='Thomas Moulard'
+export EMAIL='thomas.moulard@gmail.com'
+export REPLYTO=$EMAIL
+
+export AIST_USERNAME='t02830'
+export SF_USERNAME='thomas_moulard'
+
+# Tools
+export EDITOR='emacs'
+export MAIL="/var/mail/$USER"
+export CVS_RSH=ssh
+
+test -x /usr/lib/ccache/gcc && export CC=/usr/lib/ccache/gcc
+test -x /usr/lib/ccache/g++ && export CXX=/usr/lib/ccache/g++
+
+export OMNIORB_CONFIG=$HOME/.omniorb/omniORB.cfg
+export OMNINAMES_LOGDIR=$HOME/.omniorb
+
+export AC3D_HOME=$HOME/Downloads/ac3dlx
+
+export ROS_EMAIL="$EMAIL"
+
+KEYCHAIN_KEYS="$HOME/.ssh/id_rsa B140BA9E"
+
+export ROS_EMAILS=thomas.moulard@gmail.com
+
+#export DISTCC_HOSTS="yariga.laas.fr fujisan.laas.fr"
+#export CCACHE_PREFIX="distcc"
+
+#PROFILE="icc"
+PROFILE="laas"
