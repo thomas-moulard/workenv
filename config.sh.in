@@ -30,7 +30,7 @@ export LTDL_LIBRARY_PATH="$ROBOTPKG_BASE/lib/roboptim:$LTDL_LIBRARY_PATH"
 export LTDL_LIBRARY_PATH="$piu/lib/roboptim:$LTDL_LIBRARY_PATH"
 
 # Kineo
-RLM_LICENSE=$(find $HOME/profiles/license -name "RLM_Toulouse-`hostname | sed 's/.laas.fr$//'`-*.lic")
+export RLM_LICENSE=$(find $HOME/profiles/license -name "RLM_Toulouse-`hostname | sed 's/.laas.fr$//'`-*.lic")
 if test x"$RLM_LICENSE" = x; then
  echo "Warning: No Kineo license have been found for that machine."
 fi
