@@ -33,6 +33,8 @@ KEYCHAIN_KEYS="$HOME/.ssh/id_rsa B140BA9E"
 
 export ROS_EMAILS=thomas.moulard@gmail.com
 
+test -d /local/tmoulard/.ccache && export CCACHE_HOME=/local/tmoulard/.ccache
+
 #export DISTCC_HOSTS="yariga.laas.fr fujisan.laas.fr"
 #export CCACHE_PREFIX="distcc"
 
