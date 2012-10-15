@@ -37,4 +37,10 @@ fi
 export KPP_INSTALL_DIR=$ROBOTPKG_BASE/kineo
 
 # ROS
-test -f "$psu/ros/setup.zsh" && source "$psu/ros/setup.zsh"
+ROS_PROFILE=""
+
+if [ ${ROS_PROFILE} ]; then
+    test -f "$psu/ros-${ROS_PROFILE}/setup.zsh" && source "$psu/ros-${ROS_PROFILE}/setup.zsh"
+else
+    test -f "$psu/ros/setup.zsh" && source "$psu/ros/setup.zsh"
+fi

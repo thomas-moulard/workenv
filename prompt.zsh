@@ -17,5 +17,10 @@ local prompt_host="${lyellow}%m${std}"
 local prompt_cwd="%B%40<..<%~%<<%b"
 local prompt_time="${lblue}%D{%H:%M:%S}${std}"
 local prompt_rv="%(?..${lred}%?${std} )"
+if [ `which rosversion` ]; then
+    local prompt_rosversion=`rosversion -d`
+else
+    local prompt_rosversion="N/A"
+fi
 PROMPT="${prompt_user}${lwhite}@${std}${prompt_host}<$PROFILE> ${prompt_cwd} %(!.#.$) "
-RPROMPT="${prompt_rv}${prompt_time}"
+RPROMPT="${prompt_rv}${prompt_time} ${lgreen}${prompt_rosversion}${std}"

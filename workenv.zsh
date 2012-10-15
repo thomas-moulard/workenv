@@ -30,11 +30,13 @@ source "$WORKENV_DIR/bindkey.zsh"
 source "$WORKENV_DIR/chpwd.zsh"
 source "$WORKENV_DIR/completion.zsh"
 source "$WORKENV_DIR/hrp2.zsh"
+source "$WORKENV_DIR/ros.zsh"
 source "$WORKENV_DIR/misc.zsh"
 source "$WORKENV_DIR/options.zsh"
-source "$WORKENV_DIR/prompt.zsh"
 source "$WORKENV_DIR/self-update.zsh"
 
 source "$WORKENV_DIR/keychain.zsh"
 
 source "$WORKENV_DIR/profiles.zsh"
+
+source "$WORKENV_DIR/prompt.zsh"
