@@ -30,8 +30,9 @@ LAAS_URI=git@github.com:laas
 ROBOPTIM_URI=git@github.com:roboptim
 
 # If you do not have a GitHub account (read-only):
-#JRL_URI=git://github.com:jrl-umi3218
-#LAAS_URI=git://github.com:laas
+#JRL_URI=git://github.com/jrl-umi3218
+#LAAS_URI=git://github.com/laas
+#ROBOPTIM_URI=git://github.com/roboptim
 
 # HTTP protocol can also be used:
 #JRL_URI=https://thomas-moulard@github.com/jrl-umi3218
