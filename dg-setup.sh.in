@@ -196,7 +196,7 @@ install_pkg $SRC_DIR/sot sot-core ${JRL_URI}
 # --- Control architecture
 
 install_pkg $SRC_DIR/sot sot-dynamic ${JRL_URI}
-install_pkg $SRC_DIR/sot sot-hrp2 ${JRL_URI}
+install_pkg $SRC_DIR/sot sot-hrp2 ${LAAS_URI}
 
 
 # Additionally, you can also compile:
@@ -206,7 +206,7 @@ install_pkg $SRC_DIR/sot sot-hrp2 ${JRL_URI}
 #  install_pkg $SRC_DIR/sot sot-pattern-generator ${JRL_URI}
 #
 # OpenHRP support:
-install_pkg $SRC_DIR/sot sot-hrp2-hrpsys ${JRL_URI}
+install_pkg $SRC_DIR/sot sot-hrp2-hrpsys ${LAAS_URI}
 #
 # Visualization tools:
 #install_python_pkg $SRC_DIR/laas robot-viewer ${LAAS_URI}
