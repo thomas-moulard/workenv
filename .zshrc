@@ -4,3 +4,4 @@ if test -f "$HOME/.workenv/workenv.zsh"; then
 else
  echo "failed to load workenv"
 fi
+setopt autocd
